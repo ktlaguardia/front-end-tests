@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  color: white;
+}
+.nav-bar {
+  background-color: grey;
+}
+.nav-bar{
+  display: block;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.nav-bar a,
+.nav-bar li {
+  display: inline;
+  text-decoration: none;
+  color: white;
+  background-color: grey;
+  padding: 20px 25px;
+  text-align: center;
+}
+.nav-bar li {
+  float: left;
+}
