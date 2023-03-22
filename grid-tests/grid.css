@@ -1,0 +1,14 @@
+html{
+    background-color: lightgreen;
+}
+.col{
+    border: 2px solid black;
+    height: 200px;
+}
+.center-col{
+    border-left: 0px;
+    border-right: 0px;
+}
+.row{
+    margin: 10px;
+}
