@@ -10,8 +10,6 @@ const buttonsHoverInit = function () {
     const button = navBtns[i];
     if (button.outerHTML.startsWith("<li>")) {
       const child = navBtns[i].firstChild;
-      child.style.transition = ".25s";
-      button.style.transition = ".25s";
       navBtns[i].addEventListener("mouseover", function () {
         button.style.backgroundColor = "white";
         child.style.backgroundColor = "white";
@@ -19,8 +17,8 @@ const buttonsHoverInit = function () {
         child.style.color = "black";
       });
       navBtns[i].addEventListener("mouseout", function () {
-        button.style.backgroundColor = "grey";
-        child.style.backgroundColor = "grey";
+        button.style.backgroundColor = 'rgb(94, 81, 81)';
+        child.style.backgroundColor = 'rgb(94, 81, 81)';
         button.style.color = "white";
         child.style.color = "white";
       });
