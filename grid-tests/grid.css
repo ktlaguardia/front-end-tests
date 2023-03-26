@@ -3,12 +3,60 @@ html{
 }
 .col{
     border: 2px solid black;
-    height: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
 }
 .center-col{
     border-left: 0px;
     border-right: 0px;
 }
 .row{
-    margin: 10px;
+    margin: 5px;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: 1fr, 2fr, 1fr;
+    grid-template-rows: 4fr;
+    grid-template-areas: 
+    "header header header"
+    "main main side"
+    "main main side"
+    "footer footer footer";
+    background-color: red;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+}
+.grid-header{
+    grid-area: header;
+    height: 300px;
+    background-color: yellow;
+    overflow: hidden;
+}
+.grid-main{
+    grid-area: main;
+    height: 300px;
+    background-color: red;
+    overflow: hidden;
+}
+.grid-side{
+    grid-area: side;
+    height: 300px;
+    background-color: blue;
+    overflow: hidden;
+}
+.grid-footer{
+    grid-area: footer;
+    height: 300px;
+    background-color: brown;
+    overflow: hidden;
+}
+.block img{
+    align-self: center;
+    justify-self: center;
 }

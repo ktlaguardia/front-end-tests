@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap');
 html{
   overflow-x: hidden;
   background-color: rgb(32, 37, 43);
@@ -9,6 +10,13 @@ body {
   padding: 0px;
   width: 90vw;
 }
+h1, h2, h3{
+  font-family: 'Permanent Marker', cursive;
+}
+h4,h5,h6, p, button{
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: .05rem;
+}
 /*----------HEADERPHOTO---------*/
 .photo-header{
   position: relative;
@@ -19,16 +27,36 @@ body {
   align-items: center;
   justify-content: center;
 }
-.photo-header img{
+.photo-header iframe{
+  height: 100vh;
+  width: 100%;
+}
+.photo-header .cover{
   height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(10, 26, 2, 0.692);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#title{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 10rem;
+  margin: 30px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+   user-select: none;
 }
 /*----------NAVBAR-------------*/
 header{
-  background-color: rgb(94, 81, 81);
+  background-image: linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71));
   height: 75px;
 }
 .nav-bar{
-  background-color: rgb(94, 81, 81);
+  background-image: linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71));
   display: flex;
   list-style-type: none;
   margin: 0px;
@@ -43,7 +71,7 @@ header{
   align-items: center;
   text-decoration: none;
   color: white;
-  background-color: rgb(94, 81, 81);
+  background-image: linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71));
   padding: 20px;
   text-align: center;
   transition: .5s;
@@ -63,7 +91,7 @@ header{
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: rgb(94, 81, 81);
+  background-color: rgb(121, 100, 71);
   height: 500px;
   width: 100%;
 }
@@ -75,7 +103,89 @@ header{
   width: 50%;
   margin: 100px;
 }
-
+/*--------------SECTION ROW 1----------*/
+.s1 .btn{
+  border: 2px white solid;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: .05rem;
+  padding: 10px;
+}
+.s1 .btn:hover{
+  background-color: antiquewhite;
+  border: 2px rgb(109, 139, 113) solid;
+  color: rgb(85, 116, 89);
+}
+/*--------------SECTION ROW 2----------*/
+.row{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.menu-fade{
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0);
+  opacity: 0.25;
+  background-image: linear-gradient(rgb(109, 139, 113), rgb(121, 100, 71));
+  transition: .25s;
+}
+.s2 .col{
+  border: 1px solid rgb(167, 179, 168);
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(255,255,255, .75);
+  font-size: 2rem;
+}
+.col:hover .menu-fade{
+  color: rgb(255,255,255, .75);
+  opacity: 1;
+  transition: .25s;
+  animation: slideup .25s ease-in 0s 1;
+}
+.col:hover .menu-fade-top{
+  background-image: linear-gradient(rgb(121, 100, 71), rgb(109, 139, 113));
+  animation: slidedown .25s ease-in 0s 1;
+}
+.col:hover .slide-right{
+  animation: slideright .25s ease-in 0s 1;
+}
+.col:hover .slide-left{
+  animation: slideleft .25s ease-in 0s 1;
+}
+.s2 img{
+  max-width: 100%;
+  height: auto; 
+}
+.s2 .solid{
+  background-image: linear-gradient(rgb(82, 107, 86), rgb(121, 100, 71));
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s2 .text-box{
+  text-decoration: white;
+  color: rgb(255,255,255, .75);
+  z-index: 1;
+}
+.s2 .solid:hover{
+  background-image: linear-gradient(rgb(109, 139, 113), rgb(121, 100, 71));
+  transition: .5s;
+}
+.s2 .solid img{
+  position: absolute;
+}
 /*---------------TAGS------------------*/
 .clear{
   background-color: rgb(0, 0, 0, 0);
@@ -83,6 +193,24 @@ header{
 .overflow-hidden{
   overflow: hidden;
 }
+.hhalf{
+  height: 50%;
+}
+.whalf{
+  width: 50%;
+}
+.col{
+  position: relative;
+  padding: inherit;
+}
+.img-box{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 
 /*--------------ANIMATION---------------*/
 @keyframes wiggle {
@@ -101,4 +229,75 @@ header{
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+@keyframes slidedown {
+  from{
+    transform: translate(0px, -100%);
+  }
+  to{
+    transform: translate(0px, 0%);
+  }
+  
+}
+@keyframes slideup {
+  from{
+    transform: translate(0px, 100%);
+  }
+  to{
+    transform: translate(0px, 0%);
+  }
+  
+}
+@keyframes slideright {
+  from{
+    transform: translate(100%, 0%);
+  }
+  to{
+    transform: translate(0%, 0%);
+  }
+  
+}
+@keyframes slideleft {
+  from{
+    transform: translate(-100%, 0%);
+  }
+  to{
+    transform: translate(0%, 0%);
+  }
+  
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.s2 .solid:hover .hover-underline-animation::after,.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*--------------------@MEDIA-----------*/
+
+/*Extra large devices 1200*/
+@media only screen and (max-width: 1200px) {
+  .col-3{
+    display: none;
+  }
+}
+/*mobile devices*/
+@media only screen and (max-width: 768px) {
 }
