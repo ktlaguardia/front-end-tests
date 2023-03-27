@@ -201,18 +201,20 @@ header{
 }
 .f1 .footer-content{
   width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
   box-sizing: border-box;
 }
 .f1 .footer-body{
   height: 300px;
 }
-.f1 .col{
+.f1 .footer-text{
+  height: 80%;
+}
+.f1 .col, .f1 .logo{
   height: 100%;
 }
-.f1 .logo{
-  height: 100%;
+.f1 img{
+  padding-left: 10%;
+  height: 120%;
 }
 .f1 .declare{
   text-align: center;
@@ -227,6 +229,11 @@ header{
   width: 50%;
   height: 40px;
   border-radius: 25px;
+}
+.f1 .search{
+  display:  flex;
+  justify-content: end;
+  gap: 10px;
 }
 .f1 .search button{
   width: 10%;
@@ -342,6 +349,9 @@ header{
 /*Extra large devices 1200*/
 @media only screen and (max-width: 1200px) {
   .col-3{
+    display: none;
+  }
+  .f1 .search{
     display: none;
   }
 }
