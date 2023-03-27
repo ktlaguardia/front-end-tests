@@ -8,12 +8,12 @@ body {
   color: white;
   margin: auto;
   padding: 0px;
-  width: 90vw;
+  width: 100vw;
 }
 h1, h2, h3{
   font-family: 'Permanent Marker', cursive;
 }
-h4,h5,h6, p, button{
+body, h4,h5,h6, p, button, a{
   font-family: 'Bebas Neue', cursive;
   letter-spacing: .05rem;
 }
@@ -37,11 +37,11 @@ h4,h5,h6, p, button{
   position: absolute;
   background-color: rgba(10, 26, 2, 0.692);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 #title{
-  font-family: 'Bebas Neue', cursive;
   font-size: 10rem;
   margin: 30px;
   -moz-user-select: -moz-none;
@@ -61,12 +61,13 @@ header{
   list-style-type: none;
   margin: 0px;
   padding: 0px;
+  padding-right: 10px;
   height: 100%;
   float: right;
-  transition: .5s;
 }
 .nav-bar a,
 .nav-bar li {
+  font-size: 25px;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -74,7 +75,6 @@ header{
   background-image: linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71));
   padding: 20px;
   text-align: center;
-  transition: .5s;
 }
 .nav-bar li {
   float: left;
@@ -104,17 +104,24 @@ header{
   margin: 100px;
 }
 /*--------------SECTION ROW 1----------*/
+.s1 h1{
+  font-size: 50px;
+}
 .s1 .btn{
   border: 2px white solid;
   color: white;
   font-family: 'Bebas Neue', cursive;
+  font-size: larger;
   letter-spacing: .05rem;
-  padding: 10px;
+  padding: 15px;
 }
 .s1 .btn:hover{
   background-color: antiquewhite;
   border: 2px rgb(109, 139, 113) solid;
   color: rgb(85, 116, 89);
+}
+.s1 .socials{
+  float: right;
 }
 /*--------------SECTION ROW 2----------*/
 .row{

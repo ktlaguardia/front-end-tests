@@ -13,9 +13,9 @@ const buttonsHoverInit = function () {
       const child = navBtns[i].firstChild;
       navBtns[i].addEventListener("mouseover", function () {
         button.style.backgroundImage = "linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71), rgb(121, 100, 71), rgb(109, 139, 113))";
-        child.style.backgroundImage = "linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71), rgb(121, 100, 71), rgb(121, 100, 71), rgb(109, 139, 113))";
-        button.style.color = "black";
-        child.style.color = "black";
+        child.style.backgroundImage = "linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71), rgb(121, 100, 71), rgb(109, 139, 113))";
+        button.style.color = "rgb(109, 139, 113)";
+        child.style.color = "rgb(179, 209, 183)";
       });
       navBtns[i].addEventListener("mouseout", function () {
         button.style.backgroundImage = 'linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71))';
