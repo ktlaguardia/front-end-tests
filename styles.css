@@ -193,6 +193,46 @@ header{
 .s2 .solid img{
   position: absolute;
 }
+/*--------------FOOTER-----------------*/
+.footer{
+  height: 350px;
+  background-color: grey;
+  flex-direction: row;
+}
+.f1 .footer-content{
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+.f1 .footer-body{
+  height: 300px;
+}
+.f1 .col{
+  height: 100%;
+}
+.f1 .logo{
+  height: 100%;
+}
+.f1 .declare{
+  text-align: center;
+  color:rgb(0, 0, 0, .60);
+  transition: .5;
+}
+.f1 span:hover{
+  color:rgb(245, 247, 148);
+  transition: .5s;
+}
+.f1 input{
+  width: 50%;
+  height: 40px;
+  border-radius: 25px;
+}
+.f1 .search button{
+  width: 10%;
+  border-radius: 25px;
+  height: 40px;
+}
 /*---------------TAGS------------------*/
 .clear{
   background-color: rgb(0, 0, 0, 0);
