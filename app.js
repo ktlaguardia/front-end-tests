@@ -11,19 +11,28 @@ const buttonsHoverInit = function () {
     const button = navBtns[i];
     if (button.outerHTML.startsWith("<li")) {
       const child = navBtns[i].firstChild;
-      navBtns[i].addEventListener("mouseover", function () {
-        button.style.backgroundImage = "linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71), rgb(121, 100, 71), rgb(109, 139, 113))";
-        child.style.backgroundImage = "linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71), rgb(121, 100, 71), rgb(109, 139, 113))";
-        button.style.color = "rgb(109, 139, 113)";
-        child.style.color = "rgb(179, 209, 183)";
-      });
-      navBtns[i].addEventListener("mouseout", function () {
-        button.style.backgroundImage = 'linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71))';
-        child.style.backgroundImage = 'linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71))';
-        button.style.color = "white";
-        child.style.color = "white";
-      });
+      navBtns[i].addEventListener("mouseover", function () {});
+      navBtns[i].addEventListener("mouseout", function () {});
     }
   }
 };
 buttonsHoverInit();
+/*--------buttons hover animation end------*/
+
+/*----------modal/hamburger menu start-----*/
+const hamburger = document.querySelector(".hamburger");
+const modalCover = document.querySelector(".modal-cover");
+const sidemenu = document.querySelector(".side-menu");
+const modalToggle = function (show) {
+  show.style.display == "block"
+    ? (show.style.display = "none")
+    : (show.style.display = "block");
+};
+hamburger.addEventListener("click", function () {
+  modalToggle(modalCover);
+  modalToggle(sidemenu);
+});
+modalCover.addEventListener("click", function () {
+  modalToggle(modalCover);
+  modalToggle(sidemenu);
+});
