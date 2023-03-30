@@ -198,6 +198,7 @@ header{
   height: 350px;
   background-color: grey;
   flex-direction: row;
+  color:rgb(32, 37, 43)
 }
 .f1 .footer-content{
   width: 100%;
@@ -212,9 +213,31 @@ header{
 .f1 .col, .f1 .logo{
   height: 100%;
 }
+.f1 .nav li, .f1 .nav ul{
+  list-style-type: none;
+  padding-bottom: 5px;
+}
+.f1 a{
+  text-decoration: none;
+  color: white;
+}
 .f1 img{
   padding-left: 10%;
   height: 120%;
+}
+.f1 .button{
+  display: inline;
+}
+.f1 .button .social{
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  color:rgb(0, 0, 0, .80);
+}
+.f1 .button img{
+  padding: 0px;
+  height: 40px;
 }
 .f1 .declare{
   text-align: center;
@@ -229,6 +252,7 @@ header{
   width: 50%;
   height: 40px;
   border-radius: 25px;
+  border: 0px;
 }
 .f1 .search{
   display:  flex;
@@ -239,7 +263,21 @@ header{
   width: 10%;
   border-radius: 25px;
   height: 40px;
+  border: 0px;
 }
+.f1 .contact .contact-box{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  margin-left: 1rem;
+  color:rgb(32, 37, 43);
+  text-align: end;
+}
+.f1 .contact img{
+  height: 70%;
+  padding: 0px;
+}
+
 /*---------------TAGS------------------*/
 .clear{
   background-color: rgb(0, 0, 0, 0);
@@ -321,7 +359,6 @@ header{
   
 }
 .hover-underline-animation {
-  display: inline-block;
   position: relative;
   color: white;
 }
