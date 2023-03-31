@@ -108,10 +108,12 @@ header {
 .hamburger {
   background-color: rgb(172, 154, 128);
   display: none;
-  height: 100%;
   margin-left: auto;
   margin-right: none;
   padding: 0px;
+  position: fixed;
+  height: 75px;
+  right: 0;
 }
 .side-menu {
   display: block;
@@ -120,6 +122,9 @@ header {
 }
 .side-menu img {
   height: 50px;
+}
+.close-side{
+  display:none;
 }
 /* -------------SECTION ROWS-------------*/
 .section-row {
@@ -389,6 +394,14 @@ header {
     transform: translate(0%, 0%);
   }
 }
+@keyframes slideRightOut {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(100%, 0%);
+  }
+}
 @keyframes slideleft {
   from {
     transform: translate(-100%, 0%);
@@ -456,6 +469,19 @@ header {
   }
   .side-menu img {
     height: 80px;
+  }
+  .close-side{
+    background-color: rgb(172, 154, 128);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .hamburger img:hover, .close-side img:hover{
+    animation: none;
+  }
+  .side-menu li:hover, .side-menu a:hover{
+    background-color: aliceblue;
   }
 }
 /*mobile devices*/
