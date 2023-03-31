@@ -1,12 +1,45 @@
 .slide-down{
-    animation: slidedown 1s ease-in;
+    animation: slidedown 1s linear;
 }
 
 @keyframes slidedown {
     from {
-      transform: translate(0px, -100%);
+      transform: translate(0px, -50%);
+      opacity: 0;
     }
     to {
       transform: translate(0px, 0%);
+      opacity: 1;
     }
+  }
+
+  .title-text{
+    background-color: rgb(100, 92, 82);
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .color-test{
+    display: none;
+  }
+  .hed1 .active{
+    display: block;
+    animation: slidedown .6s ease-in;
+  }
+  #button-test{
+    margin-right: auto;
+  }
+  .color--0 {
+    color: #fffeb3 !important;
+  }
+  .color--1{
+    color: #fb2e01 !important;
+  }
+  .color--2{
+    color: #6fcb9f !important;
+  }
+  .color--3{
+    color: #ffe28a !important;
+  }
+  .color--4{
+    color: #fffeb3 !important;
   }

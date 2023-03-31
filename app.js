@@ -20,42 +20,46 @@ buttonsHoverInit();
 /*--------buttons hover animation end------*/
 
 /*----------modal/hamburger menu start-----*/
-const hamburger = document.querySelector(".hamburger");
-const modalCover = document.querySelector(".modal-cover");
-const sidemenu = document.querySelector(".side-menu");
-const closeSide = document.querySelector('.close-side');
+function hamburgerInit(){
+  const hamburger = document.querySelector(".hamburger");
+  const modalCover = document.querySelector(".modal-cover");
+  const sidemenu = document.querySelector(".side-menu");
+  const closeSide = document.querySelector('.close-side');
 
-window.onresize = function(){
-  if(modalCover.style.display == 'block'){
-    modalCover.style.display = 'none';
-  }
-  if(document.body.offsetWidth >= 1200){
-    sidemenu.style.display = 'block'; 
-    modalCover.style.display = 'none';
-    console.log(true);
-  } else{
-    sidemenu.style.display = 'none';
-  }
-};
-const modalToggle = function (show) {
-  show.style.display == "block"
-    ? (show.style.display = "none")
-    : (show.style.display = "block");
-};
-const sideBarToggle = function(){
-  modalToggle(modalCover);
-  modalToggle(sidemenu);
-}
-
-hamburger.addEventListener("click", function () {
-  sideBarToggle();
-});
-modalCover.addEventListener("click", function () {
-  /*if(modalCover.style.display == 'block' && sidemenu.style.display == 'none'){
+  window.onresize = function(){
+    if(modalCover.style.display == 'block'){
+      console.log('true');
+      modalCover.style.display = 'none';
+    }
+    if(document.body.offsetWidth >= 1200){
+      sidemenu.style.display = 'block'; 
+      modalCover.style.display = 'none';
+      console.log(true);
+    } else{
+      sidemenu.style.display = 'none';
+    }
+  };
+  const modalToggle = function (show) {
+    show.style.display == "block"
+      ? (show.style.display = "none")
+      : (show.style.display = "block");
+  };
+  const sideBarToggle = function(){
     modalToggle(modalCover);
-  };*/
-  sideBarToggle();
-});
-closeSide.addEventListener("click", function () {
-  sideBarToggle();
-});
+    modalToggle(sidemenu);
+  }
+
+  hamburger.addEventListener("click", function () {
+    sideBarToggle();
+  });
+  modalCover.addEventListener("click", function () {
+    /*if(modalCover.style.display == 'block' && sidemenu.style.display == 'none'){
+      modalToggle(modalCover);
+    };*/
+    sideBarToggle();
+  });
+  closeSide.addEventListener("click", function () {
+    sideBarToggle();
+  });
+};
+hamburgerInit();
