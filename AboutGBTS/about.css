@@ -23,7 +23,7 @@
   }
   .hed1 .active{
     display: block;
-    animation: slidedown .6s ease-in;
+    animation: slidedown .3s linear;
   }
   #button-test{
     margin-right: auto;
