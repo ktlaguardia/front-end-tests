@@ -25,6 +25,9 @@ a {
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0.05rem;
 }
+:root{
+  --pbcolor: rgb(121, 100, 71);
+}
 .modal-cover {
   display: none;
   position: fixed;
@@ -70,12 +73,12 @@ a {
 }
 /*----------NAVBAR-------------*/
 header {
-  background-image: linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71));
+  background-image: linear-gradient(var(--pbcolor), var(--pbcolor));
   height: 75px;
 }
 .nav-bar {
   position: relative;
-  background-image: linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71));
+  background-image: linear-gradient(var(--pbcolor), var(--pbcolor));
   display: flex;
   list-style-type: none;
   margin: 0px;
@@ -92,7 +95,7 @@ header {
   align-items: center;
   text-decoration: none;
   color: white;
-  background-image: linear-gradient(rgb(121, 100, 71), rgb(121, 100, 71));
+  background-image: linear-gradient(var(--pbcolor), var(--pbcolor));
   padding: 15px;
   text-align: center;
 }
@@ -132,7 +135,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: rgb(121, 100, 71);
+  background-color: var(--pbcolor);
   height: 500px;
   width: 100%;
 }
@@ -183,7 +186,7 @@ header {
   justify-content: center;
   color: rgba(255, 255, 255, 0);
   opacity: 0.25;
-  background-image: linear-gradient(rgb(109, 139, 113), rgb(121, 100, 71));
+  background-image: linear-gradient(rgb(109, 139, 113), var(--pbcolor));
   transition: 0.25s;
 }
 .s2 .col {
@@ -199,7 +202,7 @@ header {
   animation: slideup 0.25s ease-in 0s 1;
 }
 .col:hover .menu-fade-top {
-  background-image: linear-gradient(rgb(121, 100, 71), rgb(109, 139, 113));
+  background-image: linear-gradient(var(--pbcolor), rgb(109, 139, 113));
   animation: slidedown 0.25s ease-in 0s 1;
 }
 .col:hover .slide-right {
@@ -213,7 +216,7 @@ header {
   height: auto;
 }
 .s2 .solid {
-  background-image: linear-gradient(rgb(82, 107, 86), rgb(121, 100, 71));
+  background-image: linear-gradient(rgb(82, 107, 86), var(--pbcolor));
   height: 100%;
   width: 100%;
   position: absolute;
@@ -229,7 +232,7 @@ header {
   z-index: 1;
 }
 .s2 .solid:hover {
-  background-image: linear-gradient(rgb(109, 139, 113), rgb(121, 100, 71));
+  background-image: linear-gradient(rgb(109, 139, 113), var(--pbcolor));
   transition: 0.5s;
 }
 .s2 .solid img {
@@ -462,7 +465,7 @@ header {
     z-index: 5;
     width: 40%;
     height: 100vh;
-    background-color: rgb(121, 100, 71);
+    background-color: var(--pbcolor);
     display: none;
     animation: slideright 0.75s;
   }
